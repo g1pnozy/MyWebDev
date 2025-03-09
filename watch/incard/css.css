@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+      display: flex;
+      flex-direction: column;
+  }
+  html, body{
+      height: 100%;
+      font-family: 'Krona One', sans-serif;
+      h1{
+          padding-top: 31px;
+          font-family: 'Krona One', sans-serif;
+          color: white;
+          font-size: 24px;
+          text-align: center;
+      }
+  }
+
+  .doppage{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #27160a;
+}
+/*ШАПКА*/
+header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 104px;
+    align-items: center;
+    padding: 0 170px;
+
+    .logo img:hover{
+        cursor: pointer;
+        filter: brightness(1.2);
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+
+    .logo{
+        width: 55px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        img{
+            width: 121px;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    .navigate{
+        text-decoration: none;
+        font-family: 'Krona One', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        
+        a{
+            text-decoration: none;
+            color: gray;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        a.active{
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        }
+
+        a:not(.active):hover{
+            text-shadow: 0 0 40px 8px white, 2px 2px 4px rgba(0, 0, 0, 0.5);
+            filter: brightness(1.7);
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        .active::after{
+            content: '';
+            display: block;
+            width: 50%;
+            height: 2px;
+            background: white;
+            margin-top: 5px;
+        }
+        
+    }
+
+    #btn{
+        background-color: #201207;
+        color: grey;
+        font-size: 20px;
+        border-radius: 25px;
+        width: 100px;
+        height: 35px;
+        cursor: pointer;
+        box-shadow: none;
+        outline: none;
+        border: none;
+    }
+    #btn:hover{
+        background-color: #27160a;
+        box-shadow: 0 0 1000px 1px white;
+        filter: brightness(1.8);
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.5s;
+        outline: 4px white;
+    }
+}
+.overlay {
+    font-family: 'Krona One', sans-serif;
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-self: start;
+    align-items: end;
+    padding-bottom: 40px;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke: #979797;
+    -webkit-text-stroke-width: 0.4px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 20px;
+    z-index: 1;
+}
+.color{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.doppage{
+    position: relative;
+}
+.text1{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 50px;
+    right: 1100px;
+
+    h1{
+        font-size: 100px;
+        padding-top: 150px;
+        text-align: left;
+    }
+}
+
+.thewalking{
+    background-image: url(/img/thewalkin.jpg);
+    background-size: cover;
+    height: 100vh;
+    
+}
+
